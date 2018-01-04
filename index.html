@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<title>TeaLovers</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<!-- Modal Inicia Sesión -->
+<div class="modal fade" id="inicia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" align="center">
+				<img id="img_logo" src="assets/img/tealogo.png">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+			</div>
+			<div id="div-forms">
+			<form id="login-form">
+				<div class="modal-body">
+					<div id="div-login-msg">
+					<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+						<span id="text-login-msg">Ingresa tu usuario</span>
+					</div>
+						<input id="login_username" class="form-control" type="text" placeholder="Usuario" required>
+					<div id="div-login-msg">
+					<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+					<span id="text-login-msg">Ingresa tu contraseña</span>
+					</div>
+					<input id="login_password" class="form-control" type="password" placeholder="Contraseña" required>
+					<div class="checkbox">
+					<label><input type="checkbox"> Recordar</label>
+					</div>
+				</div>
+					<div class="modal-footer">
+					<div><button id="ingresa" type="submit" class="btn btn-primary btn-lg btn-block">Ingresar</button></div>
+					<div><button id="login_lost_btn" type="button" class="btn btn-link">Olvidaste tu contraseña?</button><button id="login_register_btn" type="button" class="btn btn-link">Regístrate</button></div>
+					</div>
+			</form>
+			</div>
+			</div>
+	</div>
+</div>
+<!--Barra de navegación-->
+<nav class="navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+			<img class="logo" src="assets/img/tealogo.png" alt="logo">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#inicia" data-toggle="modal">Inicia Sesión</a></li>
+			</ul>
+	</div>
+</nav>
+
+<!--Menú principal-->
+	<div class="main row container-fluid">
+		<!--Menú trending teas-->
+		<section class="left-section">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<div class="trending jumbotron">
+			</div>
+		</div>
+		</section>
+<!--Menú posts-->
+		<section class="posts-section">
+		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+			<div class="main jumbotron">
+
+			</div>
+
+			<div class="row container-fluid">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="main jumbotron">
+				<div class="container-fluid">
+  <div class="well">
+      <div class="media">
+      	<a class="pull-left" href="#">
+    		<img class="media-object" src="">
+  		</a>
+  		<div class="media-body">
+    		<h4 class="media-heading">Receta 1</h4>
+          <p class="text-right">By Francisco</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+Aliquam in felis sit amet augue.</p>
+          <ul class="list-inline list-unstyled">
+  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+            <li>|</li>
+            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+            <li>|</li>
+            <li>
+               <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+            </li>
+            <li>|</li>
+            <li>
+            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+              <span><i class="fa fa-facebook-square"></i></span>
+              <span><i class="fa fa-twitter-square"></i></span>
+              <span><i class="fa fa-google-plus-square"></i></span>
+            </li>
+			</ul>
+       </div>
+    </div>
+  </div>
+   <div class="well">
+      <div class="media">
+  		<a class="pull-left" href="#">
+    		<img class="media-object" src="">
+  		</a>
+  		<div class="media-body">
+    		<h4 class="media-heading">Receta 2</h4>
+          <p class="text-right">By Anailuj</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate. 
+Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis 
+dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. 
+Aliquam in felis sit amet augue.</p>
+          <ul class="list-inline list-unstyled">
+  			<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
+            <li>|</li>
+            <span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
+            <li>|</li>
+            <li>
+               <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+            </li>
+            <li>|</li>
+            <li>
+            <!-- Use Font Awesome http://fortawesome.github.io/Font-Awesome/ -->
+              <span><i class="fa fa-facebook-square"></i></span>
+              <span><i class="fa fa-twitter-square"></i></span>
+              <span><i class="fa fa-google-plus-square"></i></span>
+            </li>
+			</ul>
+       </div>
+    </div>
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+					</div>
+		</section>
+<!--Menú users-->
+		<section class="user-section">
+		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+			<div class="main jumbotron">
+			</div>
+		</div>
+		</section>
+
+	</div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

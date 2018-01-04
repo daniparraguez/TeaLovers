@@ -1,0 +1,27 @@
+body{
+	font-family: 'Ubuntu', sans-serif;
+	padding: 0;
+}
+a.navbar-brand{
+	padding-top: 0.5em;
+
+}
+img.logo{
+	height: 2.6em;
+	padding-top: 0.6em;
+}
+a{
+	color: black;
+	font-size: 1.5em;
+	text-decoration: none;
+	padding-left: 0.5em;
+}
+#img_logo{
+	height: 3em;
+}
+#ingresa{
+	background-color: #663868;
+}
+.main{
+	padding-top:7em;
+}

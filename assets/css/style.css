@@ -25,3 +25,10 @@ a{
 .main{
 	padding-top:7em;
 }
+#trending-teas{
+	background-color: #663868;
+}
+img.img-circle{
+	height: 3em;
+	display: none;
+}

@@ -1,14 +1,17 @@
 $(document).ready(function(){
 
-	$("#ingresa").click(function {
+	$("#ingresa").click(function() {
+		var hideLogin= $("#login").hide();
+		var hideModal= $("#inicia").hide();
+		var removeFade= $("#inicia").removeClass("modal fade");
 		var showUser= $(".img-circle").show();
-		var hideLogin=$("login").hide();
+
 	});
 
 //evento al apretar botón
-	$(".send").click(function() {
+	$("#post").click(function() {
 	//guardar input
-	var mensaje= $("#mensajetxt").val();
+	var newReview= $("#mensajetxt").val();
 	$("#mensajetxt").val(""); //limpia area
 
 //apendding inputs

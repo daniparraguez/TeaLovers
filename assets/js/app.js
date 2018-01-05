@@ -17,8 +17,6 @@ $(document).ready(function(){
 	$("#urlimg").val(""); //limpia area
 	var date= new Date;
 
-
-
 //apendding review de té input
 $(".post").append("<div class='well'>"+"<div class='media'>"+
 "<a class='pull-left' href='#'>"+

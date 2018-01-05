@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="assets/css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
+<script src="https://use.fontawesome.com/470efe3545.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -25,13 +26,10 @@
 				<div class="modal-body">
 					<div id="div-login-msg">
 					<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-						<span id="text-login-msg">Ingresa tu usuario</span>
+						<span id="text-login-msg">Ingresa tu correo</span>
 					</div>
-						<input id="login_username" class="form-control" type="text" placeholder="Usuario" required>
-					<div id="div-login-msg">
-					<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-					<span id="text-login-msg">Ingresa tu contraseña</span>
-					</div>
+						<input id="login_username" class="form-control" type="text" placeholder="E-mail" required>
+					<div id="div-login-msg"><div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div><span id="text-login-msg">Ingresa tu contraseña</span></div>
 					<input id="login_password" class="form-control" type="password" placeholder="Contraseña" required>
 					<div class="checkbox">
 					<label><input type="checkbox"> Recordar</label>
@@ -61,71 +59,82 @@
 	<div class="main row container-fluid">
 		<!--Menú trending teas-->
 		<section class="left-section">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-				<div class="list-group trending">
+		<div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+				<div id="trending" class="list-group trending">
 					<a href="#" id="trending-teas" class="list-group-item active">Trending-Teas</a>
 					<a href="#" class="list-group-item">#WhiteChaiTea</a>
 					<a href="#" class="list-group-item">#BlackTea</a>
 				</div>
 		</div>
 		</section>
+
 <!--Menú posts-->
 		<section class="posts-section">
-		<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-			<div class="main jumbotron">
+		<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+			<div class="main jumbotron clearfix" style="padding-top: 5%"> 
 
+				<textarea id="review" class="form-control" rows="3"></textarea>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="input-group input-group-" style="margin-top: 3%;">
+					<span class="input-group-addon" id="sizing-addon3">#</span>
+					<input type="text" id="type" class="form-control " placeholder="Tipo de té" aria-describedby="sizing-addon3" required >
+				</div>
+					<span ><i class="fa fa-camera" aria-hidden="true"> Sube tu imagen</i><input id="urlimg" type="file" /></span>
+				</div>
+
+			<div class="col-lg-4 col-md-4 col-sm-12 col-x2-12" style="margin-top: 1%;">
+				<div class="stars">
+				<a href="#" data-value="1" title="Votar con 1 ">&#9733;</a>
+				<a href="#" data-value="2" title="Votar con 2 ">&#9733;</a>
+				<a href="#" data-value="3" title="Votar con 3 ">&#9733;</a>
+				<a href="#" data-value="4" title="Votar con 4 ">&#9733;</a>
+				<a href="#" data-value="5" title="Votar con 5 ">&#9733;</a>
+				</div>
 			</div>
 
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align: right;">
+					<button type="button" id="post" class="btn btn-lg active" style="background-color: #663868; margin-top: 5%; color:white;">Review</button>
+				</div>
+			</div>
+<!--Caja contenedora de comentarios-->
 			<div class="row container-fluid">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="main jumbotron">
-				<div class="container-fluid">
-	<div class="well">
-			<div class="media">
-				<a class="pull-left" href="#">
-				<img class="media-object" src="">
-			</a>
-			<div class="media-body">
-				<h4 class="media-heading"></h4>
-					<p class="text-right">By Francisco</p>
-					<p class="new-review"></p>
-					<ul class="list-inline list-unstyled">
-				<li><span><i class="glyphicon glyphicon-calendar"></i> 2 days, 8 hours </span></li>
-						<li>|</li>
-						<span><i class="glyphicon glyphicon-comment"></i> 2 comments</span>
-						<li>|</li>
-						<li>
-							 <span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star"></span>
-									<span class="glyphicon glyphicon-star-empty"></span>
-						</li>
-						<li>|</li>
-			</ul>
-			</div>
-		</div>
-	</div>
+				<div class="post main jumbotron">
+				<div class="container-fluid"></div>
 				</div>
-					</div>
 				</div>
 			</div>
-					</div>
+			</div>
 		</section>
+
 <!--Menú users-->
 		<section class="user-section">
-		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<div class="col-lg-2 col-md-2 hidden-sm hidden-xs">
 			<div class="main jumbotron">
 			</div>
 		</div>
 		</section>
 
-	</div>
 
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="assets/js/app.js"></script>
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCDY7L1myxjzapFiUevqKIgSPdonjmzH8Q",
+    authDomain: "tealovers-46039.firebaseapp.com",
+    databaseURL: "https://tealovers-46039.firebaseio.com",
+    projectId: "tealovers-46039",
+    storageBucket: "tealovers-46039.appspot.com",
+    messagingSenderId: "581770593230"
+  };
+  firebase.initializeApp(config);
+</script>
 
 </body>
 </html>

@@ -1,10 +1,17 @@
 body{
 	font-family: 'Ubuntu', sans-serif;
 	padding: 0;
+	background-image: url(../img/teaback.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.97;
+}
+.jumbotron{
+	background-color: #F6F8EE;
+	opacity: 0.97;
 }
 a.navbar-brand{
 	padding-top: 0.5em;
-
 }
 img.logo{
 	height: 2.6em;
@@ -31,4 +38,24 @@ a{
 img.img-circle{
 	height: 3em;
 	display: none;
+}
+span.glyphicon-star,.glyphicon-star-empty{
+	color: #663868;
+	padding-top: 0.2em;
+	font-size: 1em;
+}
+.stars{
+	display: inline-block;
+}
+.stars a {
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.5em;
+	color: black;
+}
+.stars:hover a {
+	color: #663868;
+}
+.stars > a:hover ~ a {
+	color: black;
 }
